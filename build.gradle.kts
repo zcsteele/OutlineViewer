@@ -12,6 +12,7 @@ buildscript {
     }
     dependencies {
         classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.0")
+        classpath("de.dynamicfiles.projects.gradle.plugins:javafx-gradle-plugin:8.8.2")
     }
 }
 plugins {
@@ -31,6 +32,7 @@ apply {
     plugin("findbugs")
     plugin("jacoco")
     plugin("org.junit.platform.gradle.plugin")
+    plugin("javafx-gradle-plugin")
 }
 
 group = "edu.wpi.first.wpilib"
