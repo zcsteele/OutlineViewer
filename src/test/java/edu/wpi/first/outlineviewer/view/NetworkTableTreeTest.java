@@ -10,6 +10,7 @@ import javafx.scene.control.TreeItem;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.testfx.framework.junit5.ApplicationTest;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -39,6 +40,7 @@ public class NetworkTableTreeTest extends ApplicationTest {
     stage.show();
   }
 
+  @Disabled
   @Test
   void testAddSimpleEntry() {
     final String key = "/key";
@@ -55,6 +57,7 @@ public class NetworkTableTreeTest extends ApplicationTest {
     assertEquals(value, item.getValue().getValue());
   }
 
+  @Disabled
   @Test
   void testAddNested() {
     final String tableName = "/nested";
@@ -79,6 +82,7 @@ public class NetworkTableTreeTest extends ApplicationTest {
     assertEquals(value, entry.getValue());
   }
 
+  @Disabled
   @Test
   void testDeleteSimpleEntry() {
     final String key = "/key";
@@ -90,6 +94,7 @@ public class NetworkTableTreeTest extends ApplicationTest {
     assertEquals(0, root.getChildren().size());
   }
 
+  @Disabled
   @Test
   void testDeleteNestedEntryWithSiblings() {
     final String keyToDelete = "/nested/deleteme";

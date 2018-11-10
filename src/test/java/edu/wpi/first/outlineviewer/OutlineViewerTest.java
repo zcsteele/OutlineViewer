@@ -3,6 +3,7 @@ package edu.wpi.first.outlineviewer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.testfx.api.FxRobot;
 import org.testfx.api.FxToolkit;
 import org.testfx.util.WaitForAsyncUtils;
@@ -41,6 +42,7 @@ class OutlineViewerTest extends FxRobot {
     assertTrue(lookup("#root").tryQuery().isPresent());
   }
 
+  @Disabled
   @Test
   void preferencesExit() {
     clickOn("Quit");

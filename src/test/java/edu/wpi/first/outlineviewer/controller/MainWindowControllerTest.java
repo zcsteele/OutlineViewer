@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -55,6 +56,7 @@ public class MainWindowControllerTest extends AutoClosingApplicationTest {
     );
   }
 
+  @Disabled
   @ParameterizedTest
   @MethodSource("dataDisplayArguments")
   void testDataDisplay(Runnable addEntry, String expected) {
@@ -118,6 +120,7 @@ public class MainWindowControllerTest extends AutoClosingApplicationTest {
     assertTrue(listWindows().isEmpty());
   }
 
+  @Disabled
   @Test
   @Tag("NonHeadlessTests")
   void testDeleteItemsKey() {
@@ -131,6 +134,7 @@ public class MainWindowControllerTest extends AutoClosingApplicationTest {
     assertFalse(lookup("zz").tryQuery().isPresent());
   }
 
+  @Disabled
   @Test
   @Tag("NonHeadlessTests")
   void testDeleteItemsMenu() {
